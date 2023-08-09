@@ -5,9 +5,11 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4b0op"]
 radius = 14.0
-height = 74.0
+height = 66.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
 motion_mode = 1
 script = ExtResource("1_be2tv")
 
@@ -18,3 +20,7 @@ texture = ExtResource("1_xmc3j")
 position = Vector2(-7.10543e-15, 11)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_4b0op")
+
+[node name="ShootDelay" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true

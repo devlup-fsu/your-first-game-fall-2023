@@ -1,8 +1,20 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
+const laser_scene: PackedScene = preload("res://laser/laser.tscn") 
 
 @export var speed = 25000.0
 @export var friction = speed / 10
+
+@onready var shoot_delay: Timer = $ShootDelay
+@onready var lasers: Node2D = get_tree().root.get_node("Game/Lasers")
+
+
+func _process(_delta):
+    if Input.is_action_pressed("player_shoot") and shoot_delay.is_stopped():
+        var laser: Laser = laser_scene.instantiate()
+        lasers.add_child(laser)
+        laser.create(global_position)
+        shoot_delay.start()
 
 
 func _physics_process(delta):
