@@ -23,6 +23,7 @@ position = Vector2(0, -27)
 texture = ExtResource("2_1svcm")
 
 [node name="LaserSprite" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("1_c1utv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
