@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://begas6qek7wp" path="res://ui/ui_life.tscn" id="1_3u5cu"]
 [ext_resource type="PackedScene" uid="uid://c7lmyftpm7xfx" path="res://entities/player/player.tscn" id="1_vy1xi"]
-[ext_resource type="PackedScene" uid="uid://b6jvubmd08clm" path="res://entities/enemy/enemy.tscn" id="2_14wkh"]
 [ext_resource type="Script" path="res://entities/laser/laser_spawner.gd" id="3_5qyvn"]
+[ext_resource type="Script" path="res://entities/enemy/enemy_spawner.gd" id="5_viqrg"]
 
 [node name="Main" type="Node2D"]
 
@@ -12,8 +12,11 @@
 [node name="Player" parent="." instance=ExtResource("1_vy1xi")]
 position = Vector2(100, 360)
 
-[node name="BaseEnemy" parent="." instance=ExtResource("2_14wkh")]
-position = Vector2(1003, 370)
-
 [node name="LaserSpawner" type="Node2D" parent="."]
 script = ExtResource("3_5qyvn")
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+script = ExtResource("5_viqrg")
+
+[node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
+one_shot = true
