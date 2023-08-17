@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6jvubmd08clm"]
+
+[ext_resource type="Script" path="res://entities/enemy/enemy.gd" id="1_bjfkj"]
+[ext_resource type="Texture2D" uid="uid://bvny7vd25tc3e" path="res://entities/enemy/enemy.png" id="1_fctw2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3k1py"]
+radius = 40.0
+height = 90.0
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_bjfkj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_fctw2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3k1py")
+
+[node name="ShootDelay" type="Timer" parent="."]
+one_shot = true

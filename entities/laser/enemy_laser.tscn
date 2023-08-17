@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlwq63lti7g4l"]
+
+[ext_resource type="PackedScene" uid="uid://p3s8cngnh3nq" path="res://entities/laser/laser.tscn" id="1_cgdgr"]
+[ext_resource type="Texture2D" uid="uid://d4cr7y7jyg4vu" path="res://entities/laser/laser_red.png" id="2_03hr0"]
+
+[node name="300" instance=ExtResource("1_cgdgr")]
+SPEED = 300.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_03hr0")

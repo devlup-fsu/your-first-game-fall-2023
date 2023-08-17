@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://kvyekors3lat"]
 
 [ext_resource type="PackedScene" uid="uid://c7lmyftpm7xfx" path="res://entities/player/player.tscn" id="1_334o3"]
-[ext_resource type="PackedScene" uid="uid://b6jvubmd08clm" path="res://entities/enemy/base_enemy.tscn" id="2_bf6ke"]
+[ext_resource type="PackedScene" uid="uid://b6jvubmd08clm" path="res://entities/enemy/enemy.tscn" id="2_bf6ke"]
 
 [node name="Root" type="Node2D"]
 
