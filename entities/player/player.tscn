@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7lmyftpm7xfx"]
+[gd_scene load_steps=5 format=3 uid="uid://c7lmyftpm7xfx"]
 
 [ext_resource type="Script" path="res://entities/player/player.gd" id="1_0jpfs"]
 [ext_resource type="Texture2D" uid="uid://cl6itu418lwyn" path="res://entities/player/player_blue.png" id="1_ns25l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s5joy"]
-radius = 20.0
 height = 70.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1wax8"]
+radius = 11.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_0jpfs")
@@ -14,9 +16,14 @@ script = ExtResource("1_0jpfs")
 rotation = 1.5708
 texture = ExtResource("1_ns25l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-13, 0)
+[node name="WingsCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_s5joy")
+
+[node name="NoseCollision" type="CollisionShape2D" parent="."]
+position = Vector2(23, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1wax8")
 
 [node name="ShootDelay" type="Timer" parent="."]
 one_shot = true
