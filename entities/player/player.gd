@@ -28,6 +28,6 @@ func _physics_process(_delta):
 
 
 func damage(amount: int):
-    health -= amount
+    health = clampi(health - amount, 0, MAX_HEALTH)
     if health <= 0:
         queue_free()
