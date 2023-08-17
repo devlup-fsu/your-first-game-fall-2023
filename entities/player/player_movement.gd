@@ -9,7 +9,5 @@ func _physics_process(delta):
         velocity.y = direction * SPEED
     else:
         velocity.y = 0
-    
-    print(velocity.y)
 
     move_and_slide()
