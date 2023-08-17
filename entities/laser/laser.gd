@@ -14,6 +14,11 @@ func _process(delta):
 func _on_body_entered(body: Node2D):
     if has_hit: return
     
+    if body.is_in_group("enemies"):
+        body.damage(1)
+    elif body.is_in_group("player"):
+        body.damage(1)
+    
     $StarSprite.visible = true
     $LaserSprite.visible = false
     
@@ -21,6 +26,6 @@ func _on_body_entered(body: Node2D):
     
     has_hit = true
     
-    await get_tree().create_timer(0.5).timeout
+    await get_tree().create_timer(0.25).timeout
     
     queue_free()
