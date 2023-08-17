@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://kvyekors3lat"]
+[gd_scene load_steps=3 format=3 uid="uid://kvyekors3lat"]
 
 [ext_resource type="PackedScene" uid="uid://c7lmyftpm7xfx" path="res://entities/player/player.tscn" id="1_334o3"]
 [ext_resource type="PackedScene" uid="uid://b6jvubmd08clm" path="res://entities/enemy/base_enemy.tscn" id="2_bf6ke"]
-[ext_resource type="PackedScene" uid="uid://p3s8cngnh3nq" path="res://entities/laser/laser.tscn" id="3_sjowj"]
 
 [node name="Root" type="Node2D"]
 
@@ -11,7 +10,3 @@ position = Vector2(100, 360)
 
 [node name="BaseEnemy" parent="." instance=ExtResource("2_bf6ke")]
 position = Vector2(1003, 370)
-
-[node name="Laser" parent="." instance=ExtResource("3_sjowj")]
-position = Vector2(433, 403)
-rotation = 1.54473
