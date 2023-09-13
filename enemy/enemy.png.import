@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dirs345xtyn6h"
-path="res://.godot/imported/laser_blue_star.png-f3500b5f52005288e2b3b9a6931913eb.ctex"
+uid="uid://d1aci3ip8hvws"
+path="res://.godot/imported/enemy.png-1891d9038eeed672a2459bc4e7db5910.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/laser/laser_blue_star.png"
-dest_files=["res://.godot/imported/laser_blue_star.png-f3500b5f52005288e2b3b9a6931913eb.ctex"]
+source_file="res://enemy/enemy.png"
+dest_files=["res://.godot/imported/enemy.png-1891d9038eeed672a2459bc4e7db5910.ctex"]
 
 [params]
 

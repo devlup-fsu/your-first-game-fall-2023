@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cagjplpcr3e4n"]
+
+[ext_resource type="Texture2D" uid="uid://64a5a705ldfv" path="res://player/player_blue.png" id="1_ammeh"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_ljtfi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yugm"]
+size = Vector2(24, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8wyh"]
+size = Vector2(29, 14)
+
+[node name="player" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_ljtfi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ammeh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12, 0)
+shape = SubResource("RectangleShape2D_8yugm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(15.5, 0)
+shape = SubResource("RectangleShape2D_v8wyh")
+
+[node name="ShootDelay" type="Timer" parent="."]
+one_shot = true
