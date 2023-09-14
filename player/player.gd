@@ -19,3 +19,9 @@ func _physics_process(delta):
         velocity.y = 0
     
     move_and_slide()
+
+func damage():
+    Globals.health = Globals.health - 1
+    
+    if Globals.health == 0:
+        queue_free()
