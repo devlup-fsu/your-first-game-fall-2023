@@ -1,8 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsfejht3nypqx"]
+[gd_scene load_steps=4 format=3 uid="uid://bsfejht3nypqx"]
 
 [ext_resource type="PackedScene" uid="uid://cagjplpcr3e4n" path="res://player/player.tscn" id="1_2ycmw"]
+[ext_resource type="Script" path="res://enemy/enemy_spawner.gd" id="3_0s0ei"]
+[ext_resource type="Texture2D" uid="uid://210vceggvy2n" path="res://ui/player_life.png" id="3_d0kje"]
 
 [node name="main" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_2ycmw")]
 position = Vector2(128, 325)
+
+[node name="EnemySpawner" type="Timer" parent="."]
+one_shot = true
+script = ExtResource("3_0s0ei")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 66.9231
+offset_bottom = 55.0
+texture = ExtResource("3_d0kje")
+expand_mode = 3

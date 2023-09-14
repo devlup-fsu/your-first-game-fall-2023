@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6xeuixe11bqt"]
+[gd_scene load_steps=4 format=3 uid="uid://b6xeuixe11bqt"]
 
 [ext_resource type="Texture2D" uid="uid://d1aci3ip8hvws" path="res://enemy/enemy.png" id="1_7tf10"]
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_om0w1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcul1"]
+radius = 40.0
+height = 90.0
 
 [node name="enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_om0w1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_7tf10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
+shape = SubResource("CapsuleShape2D_mcul1")
+
+[node name="ShootDelay" type="Timer" parent="."]
+one_shot = true
